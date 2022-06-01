@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Schedule2</title>
+    <title>schedule</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,12 @@
   </head>
 
   <body>
-    <%= yield %>
+   <header>
+    <h1>Ruby on Rails スケジュール管理アプリケーション</h1>
+   </header>
+   <%= yield %>
+   <footer>
+    <h1>現在の日時: <%= get_today_date %> スケジュール合計: <%= User.count%></h1>
+   </footer>
   </body>
 </html>
